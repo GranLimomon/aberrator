@@ -56,6 +56,11 @@ public class Personaje : MonoBehaviour
 
     public bool EstaVivo()
     {
+        if (salud < 0)
+        { 
+            salud = 0; 
+        }
+
         return salud > 0;
     }
 }

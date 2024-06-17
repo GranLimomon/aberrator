@@ -54,14 +54,14 @@ public class Combate : MonoBehaviour
                 // Turno del enemigo
                 Ataque ataque = enemigo.ataques[UnityEngine.Random.Range(0, enemigo.ataques.Length)];
                 int danio = enemigo.Atacar(heroe, ataque);
-                accion = $"{enemigo.Nombre} usa {ataque.nombre} y causa {danio} de daño a {heroe.Nombre}.";
+                accion = $"{enemigo.nombre} usa {ataque.nombre} y causa {danio} de daño a {heroe.nombre}.";
             }
 
             Debug.Log(accion);
             uiCombate.MostrarAccion(accion);
             uiCombate.ActualizarSalud(heroe, enemigo);
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.2f);
         }
 
         if (heroe.EstaVivo())
