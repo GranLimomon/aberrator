@@ -13,11 +13,12 @@ public class Combate : MonoBehaviour
     private void Start()
     {
         // Inicializa los ataques
-        Ataque ataque1 = new Ataque("Ataque Rápido", 10);
+        Ataque ataque1 = new Ataque("Ataque RÃ¡pido", 10);
         Ataque ataque2 = new Ataque("Golpe Fuerte", 15);
+        // Ataque ataque3 = new Ataque("Agarre Firme", 35);
 
         // Inicializa los personajes con los ataques
-        // heroe = new Personaje("Héroe", 100, new Ataque[] { ataque1, ataque2 });
+        // heroe = new Personaje("HÃ©roe", 100, new Ataque[] { ataque1, ataque2 });
         // enemigo = new Personaje("Enemigo", 80, new Ataque[] { ataque1, ataque2 });
 
         // Inicializa la UI
@@ -40,10 +41,10 @@ public class Combate : MonoBehaviour
             if (turno % 2 != 0)
             {
                 waitingAction = true;
-                // Turno del héroe
+                // Turno del hÃ©roe
                 // Ataque ataque = heroe.ataques[UnityEngine.Random.Range(0, heroe.ataques.Length)];
                 // int danio = heroe.Atacar(enemigo, ataque);
-                // accion = $"{heroe.Nombre} usa {ataque.nombre} y causa {danio} de daño a {enemigo.Nombre}.";
+                // accion = $"{heroe.Nombre} usa {ataque.nombre} y causa {danio} de daÃ±o a {enemigo.Nombre}.";
                 while(waitingAction == true) 
                 { 
                     yield return 0;
@@ -54,14 +55,14 @@ public class Combate : MonoBehaviour
                 // Turno del enemigo
                 Ataque ataque = enemigo.ataques[UnityEngine.Random.Range(0, enemigo.ataques.Length)];
                 int danio = enemigo.Atacar(heroe, ataque);
-                accion = $"{enemigo.nombre} usa {ataque.nombre} y causa {danio} de daño a {heroe.nombre}.";
+                accion = $"{enemigo.nombre} usa {ataque.nombre} y causa {danio} de daÃ±o a {heroe.nombre}.";
             }
 
             Debug.Log(accion);
             uiCombate.MostrarAccion(accion);
             uiCombate.ActualizarSalud(heroe, enemigo);
 
-            yield return new WaitForSeconds(1.2f);
+            yield return new WaitForSeconds(1.1f);
         }
 
         if (heroe.EstaVivo())
