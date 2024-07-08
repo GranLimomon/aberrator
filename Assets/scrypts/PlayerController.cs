@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Rigidbody2D affects physics so any ops on it should happen in FixedUpdate
-        // See why here: https://learn.unity.com/tutorial/update-and-fixedupdate#
+       
         rigidbody2D.MovePosition(rigidbody2D.position + (inputVector * MovementSpeed * Time.fixedDeltaTime));
     }
 }
