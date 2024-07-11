@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - terreno
+  - evento temporal
+  - Enemy
+  - SpecificObject
   layers:
   - Default
   - TransparentFX

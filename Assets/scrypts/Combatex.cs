@@ -79,4 +79,6 @@ public class Combate : MonoBehaviour
     {
         waitingAction = false;
     }
+
+    
 }

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelTutorial.unity
     guid: 37431c643d7efc14fb04e0e168812efc
+  - enabled: 1
+    path: Assets/Scenes/pelea.unity
+    guid: 85ca6b80a828bac4a8f960b99b6123fa
   m_configObjects: {}
